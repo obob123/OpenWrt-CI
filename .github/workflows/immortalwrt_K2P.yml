@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: compile immortalwrt_hc5962
+name: compile immortalwrt_K2P
 
 on:
 #  push:
@@ -178,5 +178,5 @@ jobs:
       - name : 上传bin文件夹到 github actions
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt_immortalwrt_hc5962
+          name: OpenWrt_immortalwrt_K2P
           path: openwrt/bin
