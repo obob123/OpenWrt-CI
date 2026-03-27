@@ -14,7 +14,7 @@
 #20250103更新：1、参考ram3000m其他修改；2、更改openclash仓库，更新cloudflared版本。
 #20250104更新：1、更换内核为5.4。
 
-name: compile LEDE_hc5962_hnat
+name: compile LEDE_K2P_hnat
 
 on:
 #  push:
@@ -64,7 +64,7 @@ jobs:
           cp files/hc5962-lede/LEDE-hnat-02network-dst/mt7621_hiwifi_hc5962.dts openwrt/target/linux/ramips/dts
           cp files/hc5962-lede/LEDE-hnat-02network-dst/02_network openwrt/target/linux/ramips/mt7621/base-files/etc/board.d
 #          rm -rf openwrt/target/linux/ramips
-#          cp -r files/hc5962-lede/ramips openwrt/target/linux
+#          cp -r files/K2P-lede/ramips openwrt/target/linux
       - name: 升级feeds
         run: cd openwrt && ./scripts/feeds update -a
       - name: 安装feeds
@@ -223,5 +223,5 @@ jobs:
       - name : 上传bin文件夹(固件+ipk)到 github actions
         uses: actions/upload-artifact@v4
         with:
-          name: OpenWrt_LEDE_hc5962_hnat-20250104
+          name: OpenWrt_LEDE_K2P_hnat-20250104
           path: openwrt/bin
