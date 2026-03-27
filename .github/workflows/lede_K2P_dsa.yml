@@ -11,7 +11,7 @@
 #20240921更新：1、更新tailscale版本为1.72.1；2、删除编译代码V=s。
 #20240924更新：1、恢复LEDE仓库；2、常规更新。
 
-name: compile LEDE_hc5962_dsa
+name: compile LEDE_K2P_dsa
 
 on:
 #  push:
@@ -197,5 +197,5 @@ jobs:
       - name : 上传bin文件夹(固件+ipk)到 github actions
         uses: actions/upload-artifact@v4
         with:
-          name: OpenWrt_LEDE_hc5962_dsa-20240924
+          name: OpenWrt_LEDE_K2P_dsa-20240924
           path: openwrt/bin/targets/ramips/mt7621
